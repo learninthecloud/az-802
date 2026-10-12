@@ -8,6 +8,12 @@
 
 > Course Plan / Draft — เนื้อหาและ Lab อยู่ระหว่างพัฒนา ยังไม่ใช่เอกสารยืนยันวันเปิดอบรมหรือความพร้อมของวิดีโอทั้งหมด
 
+## ภาพรวม Lab Environment
+
+![AZ-802 Hybrid Windows Server Lab Architecture](docs/images/lab-architecture.svg)
+
+*ตัวอย่าง Architecture ที่ใช้ร่วมกันตลอด Workshop: Active Directory, File Server, Windows Client และ Azure Arc*
+
 ## รูปแบบการเรียน
 
 **Recorded Video:** Concepts และ Demo ตาม Skills Measured ของ AZ-802 ทั้ง 7 Domains เพื่อเตรียมพื้นฐานก่อน Onsite
@@ -44,6 +50,10 @@
 | 16:20–17:00 | Final Troubleshooting Challenge |
 
 Workshop เน้นให้ทำงานที่เลือกมาได้ **ครบและตรวจผลได้** ไม่ได้พยายามทำทุก Feature ใน Study Guide ภายในหนึ่งวัน
+
+## ภาพประกอบ Lab
+
+ภาพประกอบแบบ Diagram ของ Lab 01–07 และ Final Challenge อยู่ใน [Lab Briefs](docs/lab-briefs.md) โดยแสดงอยู่ใต้หัวข้อของแต่ละ Lab พร้อม Requirements และ Validation
 
 ## เอกสารหลักสูตร
 
