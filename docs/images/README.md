@@ -1,28 +1,38 @@
-# Visual Guidelines
+# Visual Guidelines — AZ-802
 
-ภาพประกอบของคอร์ส AZ-802 เป็น **mental model** ไม่ใช่ภาพตกแต่งหรือ Screenshot ของ UI
+ภาพประกอบของคอร์สเป็น **Mental Model**: ให้เห็นความสัมพันธ์หลัก แล้วเหลือพื้นที่ให้ผู้เรียนคิดต่อ ไม่ทำให้เหมือน Infographic หรือ Dashboard
 
-## Style
+## Visual rules
 
-- White background, black/gray lines and text. No accent colors, gradients, shadows, decorative icons, or pill badges.
-- Typeface: **Segoe UI** with system sans-serif fallback. Do not commit font files.
-- 1–2 line weights maximum. Thin connections, simple rectangles, no oversized cards.
-- Use the fewest elements that still explain the concept accurately.
-- Prefer a single question per image: **What interacts with what?** or **How does this process work?**
-- Clearly distinguish a direct interaction, bidirectional exchange, and conditional/indirect path.
-- Text labels should be short and technically precise.
-- SVG sources are editable and referenced by relative paths in Markdown.
-- Keep diagrams 960 × 500 with enough margins for rendering on GitHub.
-- Avoid trying to reproduce Azure Portal/Windows console views from memory; use a validated actual screenshot only if a UI walkthrough specifically requires one.
+| Element | Rule |
+|---|---|
+| Palette | ขาว `#FFFFFF`, ดำ `#171717`, ฟ้า `#2563EB` |
+| Accent | ใช้สีฟ้าเฉพาะ 1 เส้นทางหรือ 1 แนวคิดสำคัญในภาพ |
+| Font | `Segoe UI, Arial, sans-serif` (ใช้ fallback ตามระบบ ไม่เก็บไฟล์ฟอนต์ใน Repo) |
+| Font size | **สูงสุด 16px** รวมชื่อภาพ |
+| Font weight | 400 (regular) และ 600 (semibold) |
+| Shape | กรอบสี่เหลี่ยมมุมมน **5px** เป็นค่าหลัก; อนุญาต 3–7px |
+| Lines | บางประมาณ 1.2–1.4px; เส้นประใช้เฉพาะความสัมพันธ์แบบไม่ตรงหรือ Boundary |
+| Canvas | SVG 960 × 500, พื้นหลังขาว, เว้นพื้นที่ว่างอย่างตั้งใจ |
+| Content | หนึ่งภาพต่อหนึ่งแนวคิด; ป้ายสั้น; ไม่อธิบายทุกขั้นตอน |
 
-## Diagrams
+### ควรหลีกเลี่ยง
 
-- [Lab topology](lab-architecture.svg)
+- Cards จำนวนมาก, กรอบตกแต่ง, เงา, Gradient, Icons และ Pill Badges
+- สีเพื่อความสวยงามที่ไม่ได้มีความหมายทางเทคนิค
+- คำอธิบายยาว ๆ ภายในภาพ
+- ภาพเลียนแบบ Screenshot หรือ Azure Portal โดยไม่ได้ตรวจสอบ UI จริง
+
+ภาพเป็น SVG ที่แก้ข้อความ เส้น รูปร่าง และสีได้โดยตรง และฝังใน Markdown ผ่าน Relative Path
+
+## Diagram index
+
+- [Lab architecture](lab-architecture.svg)
 - [01 — Active Directory](lab-01-ad-ds.svg)
 - [02 — GPO and Windows LAPS](lab-02-gpo-laps.svg)
 - [03 — DNS and DHCP](lab-03-dns-dhcp.svg)
-- [04 — Secure File Services](lab-04-file-services.svg)
+- [04 — File Services](lab-04-file-services.svg)
 - [05 — Hyper-V](lab-05-hyper-v.svg)
 - [06 — Azure Arc](lab-06-azure-arc.svg)
 - [07 — Monitoring](lab-07-monitoring.svg)
-- [Final challenge](final-challenge.svg)
+- [Final Challenge](final-challenge.svg)
