@@ -2,7 +2,7 @@
 
 **Windows Server 2025 | AZ-802 Hands-on Project Workshop**  
 **Duration:** 1 วัน 09:00–17:00  
-**ราคาเสนอ:** 5,750 บาท (2 Tracks ปกติ 9,900 บาท; Early Bird 8,625 บาท ตามเงื่อนไขที่ประกาศ)
+**ค่าเรียน:** 5,750 บาทต่อ Track หรือ 10,500 บาทสำหรับ 2 Tracks
 
 ![Track 1 — Logical Server Roles](images/lab-architecture.svg)
 
