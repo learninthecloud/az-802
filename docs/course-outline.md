@@ -1,4 +1,6 @@
-# Course Outline — AZ-802: Administering Windows Server
+# Track 1 — Administration: Course Outline (AZ-802)
+
+หลักสูตรนี้เป็น **Hands-on Track 1**; ดู [Track 2 — Advanced Infrastructure](advanced-track.md) สำหรับ S2D, Failover Cluster, High Availability และ SMB over QUIC
 
 ## ภาพรวม
 
