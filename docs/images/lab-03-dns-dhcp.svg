@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="CLIENT01 gets an IP lease from DHCP, resolves FS01 through DNS, and accesses FS01 by SMB.">
-<title>03  DNS and DHCP</title>
-<desc>CLIENT01 gets an IP lease from DHCP, resolves FS01 through DNS, and accesses FS01 by SMB.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Client gets IP configuration from DHCP, queries DNS, and connects to FS01.">
+<title>03 / DNS and DHCP</title>
+<desc>Client gets IP configuration from DHCP, queries DNS, and connects to FS01.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">03  DNS and DHCP</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">IP configuration, name resolution, and service access</text>
-<rect x="90" y="150" width="210" height="104" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="195" y="197" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">DHCP</text><text x="195" y="222" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Scope  /  reservation</text>
-<rect x="376" y="150" width="210" height="104" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="481" y="197" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">DNS</text><text x="481" y="222" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">FS01 A record</text>
-<rect x="90" y="345" width="210" height="104" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="195" y="392" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">CLIENT01</text><text x="195" y="417" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Windows 11</text>
-<rect x="650" y="345" width="210" height="104" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="755" y="392" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">FS01</text><text x="755" y="417" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">SMB share</text>
-<line x1="195" y1="262" x2="195" y2="337" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="207" y="307" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" letter-spacing="0">1. Lease</text>
-<path d="M308 392 H480 V262" fill="none" stroke="#161616" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#arrow)"/>
-<text x="393" y="375" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" letter-spacing="0">2. DNS lookup</text>
-<line x1="310" y1="402" x2="642" y2="402" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="490" y="389" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" letter-spacing="0">3. SMB connection</text>
-<text x="650" y="231" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">DNS resolves FS01</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">03 / DNS and DHCP</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">Three different questions: address, name, service.</text>
+<rect x="112" y="165" width="214" height="82" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="219" y="196.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">DHCP</text><text x="219" y="221.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">IP / DNS settings</text>
+<rect x="404" y="165" width="214" height="82" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="511" y="196.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">DNS</text><text x="511" y="221.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">FS01 name → IP</text>
+<rect x="174" y="352" width="214" height="82" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="281" y="383.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">CLIENT01</text><text x="281" y="408.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Windows 11</text>
+<rect x="687" y="352" width="214" height="82" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="794" y="383.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">FS01</text><text x="794" y="408.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">SMB share</text>
+<path d="M219 254 V315 Q219 326 231 326 H281 V344" fill="none" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#dark-arrow)"/>
+<text x="185" y="290" fill="#171717" fill-opacity="0.65" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="start">1 / Lease</text>
+<path d="M388 370 H511 V255" fill="none" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#dark-arrow)"/>
+<text x="452" y="339" fill="#171717" fill-opacity="0.65" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="start">2 / Lookup</text>
+<line x1="395" y1="397" x2="679" y2="397" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<text x="536" y="380" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">3 / Connect</text>
 </svg>
