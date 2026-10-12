@@ -1,60 +1,48 @@
-# Track 1 — Windows Server Administration
+# Track 1 — Administration
 
-**Learn in the Cloud | AZ-802: Administering Windows Server**
+**Windows Server 2025 | AZ-802 Hands-on Project Workshop**  
+**Duration:** 1 วัน 09:00–17:00  
+**ราคาเสนอ:** 5,750 บาท (2 Tracks ปกติ 9,900 บาท; Early Bird 8,625 บาท ตามเงื่อนไขที่ประกาศ)
 
-**รูปแบบ:** Recorded Video/Pre-work + Onsite Workshop 1 วัน (09:00–17:00)  
-**Lab Platform:** Windows Server 2025, Windows 11 และ Microsoft Azure  
-**ราคาเสนอ:** 5,750 บาท/Track หรือแพ็กเกจ 2 Tracks ราคาปกติ 9,900 บาท (Early Bird 8,625 บาท ตามเงื่อนไขที่ประกาศ)
+![Track 1 — Logical Server Roles](images/lab-architecture.svg)
 
-![Track 1 — Windows Server Lab Architecture](images/lab-architecture.svg)
+## เป้าหมาย
 
-## เหมาะกับใคร
+สร้างและดูแลพื้นฐาน Windows Server Infrastructure โดยเน้น **Configure → Verify → Troubleshoot** ใช้ Images/Services ที่เตรียมไว้เพื่อให้เวลาวันอบรมเน้นการฝึกจริง
 
-System Administrator, IT Support และ Infrastructure Engineer ที่ต้องการฝึกการตั้งค่าและ Troubleshooting ของ Windows Server แบบเชื่อมโยงกันใน Project เดียว
+**Track 1 ครอบคลุม Objectives 01–05, 09–10, 12, 14, 16–18** ตาม [Selected AZ-802 Lab Catalog](lab-catalog.md)
 
-**พื้นฐาน:** Windows Server/Windows Client, IP Address, DNS และ PowerShell ขั้นพื้นฐาน
+## Lab Objectives
 
-## Skills ที่จะได้ฝึก
+| # | Selected hands-on activities |
+|---:|---|
+| 01 | Promote First DC; manage FSMO |
+| 02 | Configure AD Sites; add Additional DC |
+| 03 | Create AD Users and Groups |
+| 04 | Implement domain-based Group Policy |
+| 05 | Install Windows Admin Center (WAC) |
+| 09 | Configure DNS |
+| 10 | Implement DHCP Failover |
+| 12 | Configure Share Permissions; FSRM; DFS |
+| 14 | Server Hardening; Windows LAPS |
+| 16 | Performance Monitoring |
+| 17 | Basic Connectivity, Name Resolution and Time Sync Troubleshooting |
+| 18 | Enable AD Recycle Bin; Mini AD Health Check |
 
-| Area | หัวข้อ | ผลที่คาดหวัง |
-|---|---|---|
-| Active Directory | Additional Domain Controller, DNS, AD Replication, FSMO | เพิ่ม DC และตรวจสถานะ Directory ได้ |
-| Group Policy & Security | GPO, Windows LAPS | ใช้และตรวจสอบ Policy/Local Admin Management ได้ |
-| Networking | DNS, DHCP, IP Configuration | Client ได้ Network Configuration และ Resolve Service Names ได้ |
-| File Services | SMB Share, NTFS Permissions, FSRM (ตามเวลา) | Authorized Users เข้าถึง File Share ได้ถูกต้อง |
-| Virtualization | Hyper-V, Virtual Switch, Checkpoint (Conditional) | เข้าใจการจัดการ VM เบื้องต้น |
-| Hybrid | Azure Arc, Azure Update Manager | เห็น On-premises Server และ Update Assessment ใน Azure |
-| Diagnostics | Event Viewer, Performance Monitor, PowerShell Tools | ใช้ข้อมูลจากระบบเพื่อวิเคราะห์ Incident |
+ใน 1 วันจะ **จัดเป็นหลาย Lab Sessions โดยรวม Tasks ที่สัมพันธ์กัน** และใช้ Staged Checkpoints กับ Guided Labs สำหรับหัวข้อที่มีการ Restart/Replication/Provisioning นาน ไม่รับประกันว่าทุก Activity จะเริ่มจาก OS เปล่าและจบเต็มกระบวนการ
 
-[ตาราง Workshop](workshop-plan.md) · [รายละเอียด Lab](lab-briefs.md)
+## Recorded Video / Pre-work
 
-## Recorded Video / Pre-work (แผนเนื้อหา)
+เน้น AD DS, FSMO, Sites/Subnets, Groups, GPO, Windows Admin Center, DNS, DHCP Failover, File Services, Hardening, Windows LAPS, PerfMon และ Diagnostic Tools
 
-Recorded Video ปู Concepts, Features และ Demo ก่อนมา Workshop เพื่อให้วัน Onsite ลงมือทำได้ทันที
+[Track 1 Workshop Schedule](workshop-plan.md) · [Lab Topics](lab-briefs.md)
 
-| Module | เนื้อหา |
-|---|---|
-| M00 | Course Overview, Lab Architecture |
-| M01 | AD DS, DNS Integration และ Group Policy |
-| M02 | Hybrid Management, Windows Admin Center, Azure Arc |
-| M03 | Hyper-V และ Azure VMs |
-| M04 | DNS, DHCP, Hybrid Networking |
-| M05 | Storage, SMB, File Services, Azure File Sync |
-| M06 | Windows Server Security, Windows LAPS, Security Baselines |
-| M07 | Monitoring, Troubleshooting, Diagnostics |
+## Lab Environment
 
-หัวข้อขั้นสูงที่ไม่ได้ทำใน Track 1 Onsite เช่น **S2D, Storage Replica, SMB over QUIC, Hyper-V Replica และ HA** สามารถอ่านต่อใน [Track 2](advanced-track.md)
+Logical Roles มี DC01, DC02, MGMT01, FS01, FS02 และ CLIENT01 แต่ **สามารถรวม Roles บางส่วนใน Lab ได้** ตาม [Topology and VM Mapping](lab-topology.md) โดยเฉพาะ WAC/Management และ File/DHCP Roles
 
-**หมายเหตุ:** รายการ Modules เป็นแผนเนื้อหาที่กำลังพัฒนา ไม่ได้หมายความว่าวิดีโอทั้งหมดเผยแพร่ครบแล้ว
+## ความสัมพันธ์กับ AZ-802
 
-## การเรียนใน Workshop
+เนื้อหาอ้างอิง [AZ-802 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802) ของ Microsoft แต่คัด Tasks ที่เหมาะกับ Workshop และไม่ใช่หลักสูตรสอบอย่างเป็นทางการ
 
-ผู้เรียนรับ Requirements ของบริษัทสมมติ แล้วทดลอง Configure ระบบเป็นลำดับ ตั้งแต่ AD DS ไปจนถึง File Server และ Azure Arc ปิดท้ายด้วยโจทย์ Troubleshooting ที่ต้องตรวจหลักฐานและยืนยันผลการแก้ไข
-
-ผู้สอนเตรียม VM Images, Network, Accounts และส่วนที่ใช้เวลานานไว้ก่อนเพื่อให้ผู้เรียนใช้เวลาไปกับ Feature และการแก้ปัญหาจริง
-
-## ความเกี่ยวข้องกับ AZ-802
-
-คอร์สอิงแนวทางของ [Microsoft AZ-802 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802) แต่ไม่ใช่คอร์สสอบอย่างเป็นทางการของ Microsoft และการเรียน Onsite 1 วันไม่ได้ครอบคลุมทุกหัวข้อในข้อสอบ
-
-[ค่าเรียนและ FAQ](pricing-and-faq.md)
+ต้องการ Advanced Hybrid, Azure VM, Nested Hyper-V, Azure Files, S2D หรือ Hybrid Identity ไปที่ [Track 2](advanced-track.md)
