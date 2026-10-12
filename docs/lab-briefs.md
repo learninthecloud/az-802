@@ -1,85 +1,69 @@
 # Track 1 — Lab Topics
 
-โจทย์ที่ผู้เรียนจะได้ฝึกใน Workshop (09:00–17:00) โดยใช้ระบบเดียวกันตั้งแต่ต้นจนจบ รายละเอียดแบบ Step-by-step จะใช้ในเอกสารประกอบการเรียนของผู้ลงทะเบียน
+รายการด้านล่างเป็น Selected Activities สำหรับ Workshop 1 วัน โดยจัดกลุ่มให้ทำงานต่อเนื่องจากระบบเดียวกัน ไม่ใช่ 12 Labs ที่ต้องเริ่มจาก OS เปล่าทั้งหมด
 
-## Lab 01 — Active Directory
+![Track 1 — Logical Roles](images/lab-architecture.svg)
 
-![Lab 01 — Active Directory](images/lab-01-ad-ds.svg)
+## 01 — AD Foundation (Objectives 01–03)
 
-**โจทย์:** เพิ่ม Domain Controller และตรวจว่า Directory พร้อมให้บริการ
+- **โจทย์:** สร้าง Domain ใหม่และเพิ่ม Domain Controller ให้ทำงานร่วมกัน
+- **กิจกรรม:** Promote First DC, Manage FSMO, Configure AD Sites/Subnets, Add Additional DC, Create AD Users/Groups
+- **ตรวจผล:** `netdom query fsmo`, `dcdiag`, `repadmin /replsummary`, Sites และ Security Principals
+- **Delivery:** Guided/Staged Setup สำหรับการ Promote และ Restart
 
-**ลงมือทำ:** Promote Additional DC, ตรวจ Replication/DNS/SYSVOL และ FSMO Roles
+## 02 — Group Policy and Remote Management (Objectives 04–05)
 
-**Expected Outcome:** DC ที่เพิ่ม Healthy และ AD Replication ตรวจสอบได้
+- **โจทย์:** ตั้ง Domain-based Policy และบริหารเครื่องจากส่วนกลาง
+- **กิจกรรม:** Implement GPO, Install Windows Admin Center
+- **ตรวจผล:** `gpresult` และ Remote Server Connection ผ่าน WAC
+- **Delivery:** Hands-on + Prepared Management VM
 
-## Lab 02 — Group Policy & Windows LAPS
+## 03 — DNS and DHCP Failover (Objectives 09–10)
 
-![Lab 02 — GPO / Windows LAPS](images/lab-02-gpo-laps.svg)
+![Lab — DNS and DHCP](images/lab-03-dns-dhcp.svg)
 
-**โจทย์:** กำหนด Policy และควบคุม Local Administrator Password อย่างปลอดภัย
+- **โจทย์:** ให้ Client ได้ IP และ Resolve ชื่อได้ พร้อมมี DHCP Partner Server
+- **กิจกรรม:** Configure DNS และ DHCP Failover บน DHCP Servers 2 ตัว
+- **ตรวจผล:** DNS Queries, Scope/Failover Relationship, Leases
+- **Delivery:** Guided (DHCP Roles/Network เตรียมไว้ล่วงหน้า)
 
-**ลงมือทำ:** OU/GPO, Windows LAPS และตรวจผลจาก Windows Client
+## 04 — File Services (Objective 12)
 
-**Expected Outcome:** GPO Applied และ LAPS Backup/Permission ทำงานตามที่ออกแบบ
+![Lab — File Services](images/lab-04-file-services.svg)
 
-## Lab 03 — DNS & DHCP
+- **โจทย์:** Share Files ตามสิทธิ์และรวม Namespace ของ File Shares
+- **กิจกรรม:** Share Permissions, FSRM, DFS Namespace
+- **ตรวจผล:** User Access Test, FSRM Rules, DFS Path
+- **Delivery:** Hands-on/Guided; DFS Replication เป็น Extension เท่านั้น
 
-![Lab 03 — DNS / DHCP](images/lab-03-dns-dhcp.svg)
+## 05 — Security (Objective 14)
 
-**โจทย์:** ให้ Client ได้ IP Configuration ถูกต้องและติดต่อบริการด้วยชื่อได้
+![Lab — Windows LAPS](images/lab-02-gpo-laps.svg)
 
-**ลงมือทำ:** DNS Records, DHCP Scope/Options/Reservation และ Name Resolution Tests
+- **โจทย์:** ปกป้อง Server และลดการใช้ Local Administrator Password ร่วมกัน
+- **กิจกรรม:** Windows Server Hardening Controls, Implement Windows LAPS
+- **ตรวจผล:** Policy/Control Status, LAPS Backup/Permissions
+- **Delivery:** Hands-on โดย Instructor เตรียม Schema/Permissions ไว้
 
-**Expected Outcome:** Client ได้ IP และ Resolve ชื่อ Server ได้ถูกต้อง
+## 06 — Performance Monitoring (Objective 16)
 
-## Lab 04 — Secure File Services
+![Lab — Diagnostics](images/lab-07-monitoring.svg)
 
-![Lab 04 — File Services](images/lab-04-file-services.svg)
+- **กิจกรรม:** Configure PerfMon Counters และ Data Collector Set
+- **ตรวจผล:** มี Collected Data ที่เปิดอ่านและตีความเบื้องต้นได้
 
-**โจทย์:** เปิด File Share ให้หลายฝ่ายใช้งานโดยกำหนดสิทธิ์อย่างเหมาะสม
+## 07 — Basic Troubleshooting (Objective 17)
 
-**ลงมือทำ:** SMB Share, Share Permissions, NTFS Permissions และอาจเพิ่ม FSRM ตามเวลา
+- **กิจกรรม:** Network Connectivity, DNS Name Resolution, Windows Time Synchronization
+- **ตรวจผล:** `Test-NetConnection`, `Resolve-DnsName`, `w32tm` และ Logs ที่เกี่ยวข้อง
 
-**Expected Outcome:** ผู้ใช้ที่มีและไม่มีสิทธิ์ได้รับผลการเข้าถึงตรงตาม Requirement
+## 08 — AD Recovery / Health (Objective 18)
 
-## Lab 05 — Hyper-V (Conditional)
+![Lab — AD DS](images/lab-01-ad-ds.svg)
 
-![Lab 05 — Hyper-V](images/lab-05-hyper-v.svg)
-
-**โจทย์:** เรียนรู้ Virtual Switch และ Recovery Point ของ VM
-
-**ลงมือทำ:** Virtual Switch และ Checkpoint/Restore กับ Test VM ตามความพร้อมของ Environment
-
-**Expected Outcome:** ตรวจ Network ของ VM และเข้าใจข้อจำกัดของ Checkpoint เทียบกับ Backup
-
-## Lab 06 — Azure Arc
-
-![Lab 06 — Azure Arc](images/lab-06-azure-arc.svg)
-
-**โจทย์:** บริหาร On-premises Windows Server ผ่าน Azure
-
-**ลงมือทำ:** Azure Arc Onboarding และ Update Manager Assessment
-
-**Expected Outcome:** Server เชื่อมต่อ Azure Arc ได้ และตรวจ Update Status ได้
-
-## Lab 07 — Monitoring & Diagnostics
-
-![Lab 07 — Monitoring](images/lab-07-monitoring.svg)
-
-**โจทย์:** ใช้หลักฐานจากระบบเพื่อหาสาเหตุปัญหา
-
-**ลงมือทำ:** Event Viewer, Performance Monitor และ Diagnostic Commands
-
-**Expected Outcome:** อธิบายอาการและผลตรวจจาก Logs/Commands ได้
-
-## Final Troubleshooting Challenge
-
-![Final Challenge](images/final-challenge.svg)
-
-รับ Incident Scenario ของบริษัทสมมติแล้วใช้ข้อมูลที่ตรวจพบเพื่อสรุป Root Cause และ Validate ผลหลังแก้ไข
-
-**Expected Outcome:** ระบุ Symptoms, Evidence, Fix และผลทดสอบหลังแก้ได้อย่างชัดเจน
+- **กิจกรรม:** Enable AD Recycle Bin, Restore Test Object และ Mini AD Health Check
+- **ตรวจผล:** Restored Object ถูกต้อง, `dcdiag`/`repadmin` และ Event Logs
 
 ---
 
-[ตาราง Workshop](workshop-plan.md) · [Course Outline](course-outline.md) · [ค่าเรียนและ FAQ](pricing-and-faq.md)
+[Schedule](workshop-plan.md) · [Selected 18 Objectives](lab-catalog.md) · [Track 2](advanced-track.md)
