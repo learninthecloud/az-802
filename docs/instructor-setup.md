@@ -2,6 +2,8 @@
 
 เอกสารสำหรับเตรียม Onsite Workshop จำนวนประมาณ 20–25 คน ไม่ใช่ขั้นตอนติดตั้ง Production
 
+![AZ-802 Lab Architecture](images/lab-architecture.svg)
+
 ## ข้อเสนอด้าน Delivery
 
 - **แนะนำ:** ทำงานเป็นคู่ Pod ละ 2 คน = ประมาณ 10–13 Pods
