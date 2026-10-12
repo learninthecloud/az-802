@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Advanced track S2D cluster with two nodes witness and CSV">
+<title>Advanced S2D cluster mental model</title>
+<rect width="960" height="500" fill="#FFFFFF"/>
+<g font-family="Segoe UI, Arial, sans-serif" fill="#171717">
+<text x="52" y="55" font-size="16px" font-weight="600">Track 2 / Storage resilience</text>
+<text x="52" y="80" font-size="12px" font-weight="400">Two nodes. One pool. Defined failure boundaries.</text>
+</g>
+<rect x="80" y="139" width="800" height="305" rx="7" stroke="#171717" stroke-width="1.2" stroke-opacity=".35" stroke-dasharray="5 5" fill="#FFFFFF"/>
+<text x="97" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="12px" fill="#171717" fill-opacity=".65">Failover cluster</text>
+<rect x="136" y="176" width="237" height="105" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2"/>
+<rect x="587" y="176" width="237" height="105" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2"/>
+<g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+<text x="255" y="221" font-size="14px" font-weight="600" fill="#171717">S2D01</text>
+<text x="255" y="249" font-size="12px" fill="#171717" fill-opacity=".7">Local data disks</text>
+<text x="706" y="221" font-size="14px" font-weight="600" fill="#171717">S2D02</text>
+<text x="706" y="249" font-size="12px" fill="#171717" fill-opacity=".7">Local data disks</text>
+</g>
+<rect x="415" y="143" width="130" height="65" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2"/>
+<text x="480" y="181" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-size="13px" font-weight="600" fill="#171717">Witness</text>
+<path d="M373 198 H407 M553 198 H587" stroke="#171717" stroke-width="1.2" stroke-dasharray="5 5" fill="none"/>
+<path d="M255 291 V342 H479 V363" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+<path d="M706 291 V342 H479" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+<rect x="360" y="365" width="240" height="68" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<text x="480" y="395" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-size="14px" font-weight="600" fill="#2563EB">Storage Pool / CSV</text>
+<text x="480" y="416" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-size="11px" font-weight="400" fill="#171717" fill-opacity=".75">ReFS / resilient volume</text>
+</svg>
