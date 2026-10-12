@@ -1,17 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Final troubleshooting challenge: analyze SMB and GPO symptoms, collect evidence and validate the fix.">
-<title>Final challenge</title>
-<desc>Final troubleshooting challenge: analyze SMB and GPO symptoms, collect evidence and validate the fix.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Two apparent faults lead into a root-cause investigation and post-remediation retesting.">
+<title>Final / Incident</title>
+<desc>Two apparent faults lead into a root-cause investigation and post-remediation retesting.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">Final challenge</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Restore service access without weakening security</text>
-<rect x="80" y="147" width="272" height="85" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="216" y="197" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">File share fails</text>
-<rect x="80" y="314" width="272" height="85" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="216" y="364" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">GPO not applied</text>
-<rect x="430" y="229" width="220" height="101" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="540" y="262" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Diagnostics</text><text x="540" y="287" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">DNS  /  Connectivity</text><text x="540" y="312" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">GPO  /  SMB  /  ACL</text>
-<rect x="734" y="229" width="163" height="101" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="815.5" y="274.5" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Validate</text><text x="815.5" y="299.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Fix  /  Retest</text>
-<path d="M360 190 H391 V252 H422" fill="none" stroke="#161616" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#arrow)"/>
-<path d="M360 356 H391 V308 H422" fill="none" stroke="#161616" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#arrow)"/>
-<line x1="658" y1="279" x2="726" y2="279" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="80" y="443" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">Evidence + root cause + exact fix + authorized / unauthorized access tests</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">Final / Incident</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">Domain login succeeds. The file share still fails.</text>
+<rect x="104" y="171" width="229" height="85" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="218.5" y="204" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">SMB access</text><text x="218.5" y="229" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Failed</text>
+<rect x="104" y="339" width="229" height="85" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="218.5" y="372" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">GPO</text><text x="218.5" y="397" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Not applied</text>
+<rect x="435" y="254" width="203" height="89" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2" stroke-opacity="0.75"/><text x="536.5" y="303.5" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Root cause</text>
+<rect x="754" y="254" width="144" height="89" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="826" y="303.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Retest</text>
+<path d="M341 215 H376 Q386 215 386 225 V284 H427" fill="none" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#dark-arrow)"/>
+<path d="M341 383 H376 Q386 383 386 373 V315 H427" fill="none" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#dark-arrow)"/>
+<line x1="646" y1="299" x2="746" y2="299" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<text x="480" y="455" fill="#171717" fill-opacity="0.66" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Evidence → Minimal fix → Authorized and unauthorized tests</text>
 </svg>
