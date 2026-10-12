@@ -1,96 +1,78 @@
-# AZ-802 — Administering Windows Server
+# Windows Server 2025 — Hands-on Project Workshop
 
-**Learn in the Cloud | Windows Server 2025**
+**Learn in the Cloud | AZ-802: Administering Windows Server**
 
-หลักสูตรสำหรับผู้ดูแล Windows Server ที่ต้องการฝึกตั้งแต่ Configure ไปจนถึง Validate และ Troubleshoot ในสภาพแวดล้อม On-premises และ Hybrid
+เรียน Concepts ผ่าน Recorded Video ก่อนมา Workshop แล้วลงมือทำจากโจทย์ที่ใกล้เคียงงานจริงบน Windows Server 2025 และ Microsoft Azure
 
-**รูปแบบ:** Recorded Video (เรียนล่วงหน้า) + 2 Hands-on Tracks (Track ละ 1 วัน 09:00–17:00)
+มี **2 Tracks** ให้เลือกเรียนแยกกันได้ แต่ละ Track เป็น Workshop **1 วัน เวลา 09:00–17:00** ผู้เรียนไม่จำเป็นต้องลงทะเบียนทั้งสอง Track
 
-> Track 2 ยังเป็น **Course Design Proposal** ต้องทดลอง S2D/Cluster/QUIC และยืนยัน Lab Infrastructure ก่อนเปิดสอน
+> **สถานะ:** กำลังเตรียมเปิดรุ่นแรก ตารางเรียนและรายละเอียดการสมัครจะประกาศภายหลัง ราคาด้านล่างเป็นราคาที่เสนอสำหรับเปิดหลักสูตร ยังไม่ใช่หน้ารับชำระเงิน
 
-> Course Plan / Draft — เนื้อหาและ Lab อยู่ระหว่างพัฒนา ยังไม่ใช่เอกสารยืนยันวันเปิดอบรมหรือความพร้อมของวิดีโอทั้งหมด
+## เลือก Track ที่เหมาะกับคุณ
 
-## Hands-on Tracks
+| | Track 1 — Administration | Track 2 — Advanced Infrastructure |
+|---|---|---|
+| เหมาะกับ | IT Support, System Administrator, ผู้เริ่มดูแล Server | System Administrator และ Infrastructure Engineer ที่มีพื้นฐานแล้ว |
+| เป้าหมาย | Configure ระบบให้ใช้งานได้ ตรวจสอบและแก้ปัญหาเป็น | เข้าใจ Storage, Virtualization และ Advanced Server Features ผ่าน Lab |
+| Hands-on | AD DS, GPO/LAPS, DNS/DHCP, SMB, Azure Arc, Monitoring | Failover Cluster, **Storage Spaces Direct (S2D)**, Hyper-V Nested Lab, SMB over QUIC |
+| รูปแบบ | Recorded Video + Onsite 1 วัน | Recorded Video/Pre-work + Onsite 1 วัน |
+| รายละเอียด | [Track 1 Course Outline](docs/course-outline.md) | [Track 2 Course Outline](docs/advanced-track.md) |
 
-| Track | แนวทาง | Main Labs | ระยะเวลา |
-|---|---|---|---|
-| **Track 1 — Administration** | Deploy / Configure / Validate / Troubleshoot | AD DS, GPO/LAPS, DNS/DHCP, File Services, Azure Arc | 1 วัน |
-| **Track 2 — Advanced Infrastructure** | Resilience / High Availability / Disaster Recovery | Failover Clustering, **S2D/CSV**, Node Failure, Hyper-V Live Migration, SMB over QUIC | **เป้าหมาย** 1 วัน (อยู่ระหว่างพัฒนา) |
+### Track 1 / Administration
 
-Track 2 เป็น **Advanced Lab ที่แยกต่างหาก** ไม่ต้องลง Track 1 หากมีพื้นฐานเทียบเท่า และไม่ทำทุก Feature ขั้นสูงภายในหนึ่งวัน
+![Track 1 — Windows Server Lab Topology](docs/images/lab-architecture.svg)
 
-อ่าน [รายละเอียด Track 2 — Advanced Infrastructure](docs/advanced-track.md)
+เริ่มจาก Domain Controller, DNS/DHCP และ Group Policy แล้วต่อยอดไป File Services, Windows LAPS, Azure Arc และ Troubleshooting โดยใช้ Environment เดียวตลอดวัน
 
-![Advanced S2D and Failover Cluster Concept](docs/images/advanced-s2d-cluster.svg)
+[ดูหัวข้อและตาราง Track 1](docs/workshop-plan.md)
 
-## ภาพรวม Lab Environment
+### Track 2 / Advanced Infrastructure
 
-![AZ-802 Hybrid Windows Server Lab Architecture](docs/images/lab-architecture.svg)
+![Track 2 — S2D Cluster Mental Model](docs/images/advanced-s2d-cluster.svg)
 
-*ตัวอย่าง Architecture ที่ใช้ร่วมกันตลอด Workshop: Active Directory, File Server, Windows Client และ Azure Arc*
+ใช้ **Azure VM ขนาดใหญ่เป็น Hyper-V Host** และเตรียม Windows Server Guest VM Images ไว้ก่อนเริ่มเรียน เพื่อใช้เวลาที่มีไปกับการทดลอง Features มากกว่าการติดตั้ง OS
 
-## รูปแบบการเรียน
+แกนหลักของ Track 2 คือสร้าง Failover Cluster และทดลอง **Enable S2D / Create Storage Pool** ให้สำเร็จ พร้อมฝึกสร้าง **Virtual Machine เปล่า (ไม่ติดตั้ง OS)** ในบท Nested Hyper-V และทำ Lab/Guided Demo ฟีเจอร์ขั้นสูงที่คัดเลือกไว้
 
-**Recorded Video:** Concepts และ Demo ตาม Skills Measured ของ AZ-802 ทั้ง 7 Domains เพื่อเตรียมพื้นฐานก่อน Onsite
+**ขอบเขตที่ชัดเจน:** เป็น Lab สำหรับเรียนรู้แนวคิดและ Configuration ไม่ใช่การ Deploy Production HA Cluster หรือทดสอบ Failover ทุกกรณี
 
-**Track 1 Onsite:** ทำ Project เดียวกันตลอดวัน ได้แก่ เพิ่ม Domain Controller, GPO/Windows LAPS, DNS/DHCP, File Services, Azure Arc, Monitoring และ Final Troubleshooting Challenge โดยมี Hyper-V เป็น Conditional Lab
+[ดูหัวข้อและตาราง Track 2](docs/advanced-track.md)
 
-ใช้ **Windows Server 2025** เป็น Lab Platform หลัก; หัวข้อสอบ AZ-802 ไม่ได้จำกัดเฉพาะ Windows Server 2025
+## ค่าเรียน (ราคาที่เสนอ)
 
-## สิ่งที่จะได้ฝึกใน Track 1
+| Package | สิ่งที่ได้รับ | ราคา |
+|---|---|---:|
+| **1 Track** | Recorded Video/Pre-work + Onsite Workshop 1 วัน (เลือก Track 1 หรือ 2) | **5,750 บาท** |
+| **2 Tracks** | ทั้ง Track 1 และ Track 2 รวม Onsite Workshop 2 วัน | **8,625 บาท** |
 
-- Deploy Additional Domain Controller และตรวจ Replication / FSMO / DNS
-- Configure Group Policy และ Windows LAPS
-- Configure DNS, DHCP และตรวจการทำงานจาก Windows Client
-- Configure SMB Share และ Share/NTFS Permissions
-- Connect On-premises Windows Server กับ Azure Arc และดู Update Assessment
-- Monitor / Diagnose ด้วย Event Viewer, Performance Monitor และคำสั่ง Troubleshooting
-- แก้ Incident จาก Requirements และหลักฐานที่ตรวจพบจริง
+**2 Tracks ประหยัด 2,875 บาท (25%)** จากราคาปกติรวม 11,500 บาท โดย Track ที่สองลด 50%
 
-## Track 1 — Workshop Schedule
+เงื่อนไขเกี่ยวกับ VAT, อาหาร/เครื่องดื่ม, วันจัดอบรม, จำนวนที่นั่ง และวิธีสมัครจะยืนยันในประกาศเปิดรับสมัคร
 
-| เวลา | กิจกรรม |
-|---|---|
-| 09:00–09:20 | Requirements, Architecture, Lab Check |
-| 09:20–10:10 | Lab 01 — Active Directory |
-| 10:10–10:55 | Lab 02 — GPO & Windows LAPS |
-| 10:55–11:40 | Lab 03 — DNS & DHCP |
-| 11:40–12:00 | Validation & Q&A |
-| 12:00–13:00 | Lunch |
-| 13:00–14:10 | Lab 04 — File Services |
-| 14:10–14:45 | Lab 05 — Hyper-V (Conditional) |
-| 14:45–15:00 | Break |
-| 15:00–15:45 | Lab 06 — Azure Arc & Update Manager |
-| 15:45–16:20 | Lab 07 — Monitoring & Diagnostics |
-| 16:20–17:00 | Final Troubleshooting Challenge |
+[รายละเอียดแพ็กเกจและคำถามที่พบบ่อย](docs/pricing-and-faq.md)
 
-Workshop เน้นให้ทำงานที่เลือกมาได้ **ครบและตรวจผลได้** ไม่ได้พยายามทำทุก Feature ใน Study Guide ภายในหนึ่งวัน
+## แนวทางการเรียน
 
-## ภาพประกอบ Lab
+- **ก่อนมา Onsite:** ดู Recorded Video/Pre-work และทบทวนเนื้อหาพื้นฐานของ Track ที่เลือก
+- **ใน Workshop:** รับ Requirements, ลงมือทำ Configuration ด้วยตนเอง และตรวจผลด้วยเครื่องมือจริง
+- **หลังทำ Lab:** เข้าใจว่า Feature ทำอะไร ใช้เมื่อใด และจะตรวจสอบได้อย่างไรว่าทำงานตามที่คาดไว้
 
-| | |
-|---|---|
-| ![01 Active Directory](docs/images/lab-01-ad-ds.svg) | ![02 Group Policy and LAPS](docs/images/lab-02-gpo-laps.svg) |
-| 01 — Active Directory | 02 — GPO & Windows LAPS |
-| ![03 DNS and DHCP](docs/images/lab-03-dns-dhcp.svg) | ![04 File Services](docs/images/lab-04-file-services.svg) |
-| 03 — DNS & DHCP | 04 — File Services |
-| ![05 Hyper-V](docs/images/lab-05-hyper-v.svg) | ![06 Azure Arc](docs/images/lab-06-azure-arc.svg) |
-| 05 — Hyper-V (Optional) | 06 — Azure Arc |
-| ![07 Monitoring](docs/images/lab-07-monitoring.svg) | ![Final Challenge](docs/images/final-challenge.svg) |
-| 07 — Monitoring | Final Challenge |
+Lab Environment ใช้ Windows Server 2025 และ Microsoft Azure โดยผู้สอนเตรียม Images, Accounts และ Configuration ที่ใช้เวลานานให้ล่วงหน้า เพื่อให้ผู้เรียนโฟกัสที่โจทย์หลัก
 
-ภาพประกอบใช้พื้นหลังขาว เส้นดำ และสีฟ้าเฉพาะจุดสำคัญ ตัวอักษร Segoe UI สูงสุด 16px และกรอบมุมมน 5px อ่านรายละเอียดโจทย์และวิธีตรวจผลใน [Lab Briefs](docs/lab-briefs.md) หรือดู [Visual Guidelines](docs/images/README.md)
+## คุณควรมีพื้นฐานอะไร?
+
+**Track 1:** Windows Client/Server พื้นฐาน, IP Address, DNS และใช้ PowerShell ได้บ้าง
+
+**Track 2:** AD DS, DNS, Storage, Hyper-V และ PowerShell ระดับใช้งานได้จริง **ไม่จำเป็นต้องเรียน Track 1 ก่อน** ถ้ามีพื้นฐานเทียบเท่า
 
 ## เอกสารหลักสูตร
 
-- [Advanced Infrastructure Track](docs/advanced-track.md) — S2D, Cluster, CSV, Live Migration, SMB over QUIC และ Advanced Feature Backlog
-- [Course Outline — Track 1](docs/course-outline.md) — กลุ่มเป้าหมาย, วัตถุประสงค์, Recorded Video Modules และ Mapping กับ AZ-802
-- [Workshop Plan](docs/workshop-plan.md) — Project Scenario, ตารางเวลา, Priority และ Contingency Plan
-- [Lab Briefs](docs/lab-briefs.md) — โจทย์, ขั้นตอนระดับงาน และ Validation ของ Lab 01–07 + Final Challenge
-- [Instructor Setup](docs/instructor-setup.md) — Lab Topology, Prerequisites, Azure/Hyper-V Readiness และ Checklist เตรียมสอน
+- [Track 1 — Course Outline](docs/course-outline.md)
+- [Track 1 — Workshop Schedule](docs/workshop-plan.md)
+- [Track 1 — Lab Topics](docs/lab-briefs.md)
+- [Track 2 — Advanced Infrastructure](docs/advanced-track.md)
+- [ค่าเรียนและ FAQ](docs/pricing-and-faq.md)
 
-## Reference
+**Reference:** [Microsoft Learn — AZ-802 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802)
 
-[Microsoft Learn — Study guide for Exam AZ-802: Administering Windows Server](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802)
-
-AZ-802 เป็นชื่อและขอบเขตของการสอบ Microsoft; หลักสูตรนี้เป็น Course Plan ของ Learn in the Cloud ไม่ใช่หลักสูตรที่ Microsoft ออกแบบหรือรับรองโดยตรง
+หลักสูตรนี้พัฒนาโดย Learn in the Cloud ไม่ใช่หลักสูตรที่จัดหรือรับรองอย่างเป็นทางการโดย Microsoft การเรียน Workshop ไม่ได้ยืนยันผลสอบหรือครอบคลุมทุกหัวข้อที่อาจออกสอบ
