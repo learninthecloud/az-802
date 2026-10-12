@@ -10,6 +10,10 @@
 
 **หมายเหตุ:** เอกสารนี้เป็นแผนพัฒนาคอร์ส ไม่ได้หมายความว่าวิดีโอหรือ Lab ทั้งหมดผลิตเสร็จแล้ว และ Workshop 1 วันไม่ได้ครอบคลุมทุกหัวข้อในข้อสอบ
 
+![AZ-802 Project Lab Architecture](images/lab-architecture.svg)
+
+*ภาพรวม Environment สำหรับ Onsite Workshop — เป็น Conceptual Diagram ไม่ใช่ Screenshot จาก Windows Server*
+
 ## ผู้เรียนที่เหมาะสม
 
 - System Administrator / Infrastructure Engineer ที่ดูแล Windows Server, AD DS, DNS หรือ File Server
