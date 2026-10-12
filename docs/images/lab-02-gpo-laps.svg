@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="GPO configures Windows LAPS on CLIENT01 and LAPS backs up the managed password to Active Directory.">
-<title>02  Group Policy and Windows LAPS</title>
-<desc>GPO configures Windows LAPS on CLIENT01 and LAPS backs up the managed password to Active Directory.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Group Policy reaches the client; the managed local administrator password is backed up to AD DS.">
+<title>02 / GPO and Windows LAPS</title>
+<desc>Group Policy reaches the client; the managed local administrator password is backed up to AD DS.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">02  Group Policy and Windows LAPS</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Two directions: policy distribution and password backup</text>
-<rect x="85" y="167" width="225" height="109" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="197.5" y="204" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">AD DS</text><text x="197.5" y="229" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Computer accounts</text><text x="197.5" y="254" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">LAPS backup</text>
-<rect x="367" y="167" width="225" height="109" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="479.5" y="216.5" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Group Policy</text><text x="479.5" y="241.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">LAPS configuration</text>
-<rect x="650" y="167" width="225" height="109" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="762.5" y="216.5" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">CLIENT01</text><text x="762.5" y="241.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Local Administrator</text>
-<line x1="317" y1="221" x2="360" y2="221" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="599" y1="221" x2="642" y2="221" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="480" y="148" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Policy applies to client</text>
-<path d="M762 283 V357 H196 V283" fill="none" stroke="#161616" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-<text x="475" y="345" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Password backup to AD DS</text>
-<text x="86" y="416" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">Check  /  gpresult + LAPS operational log</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">02 / GPO and Windows LAPS</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">The policy goes out. The password comes back.</text>
+<rect x="111" y="198" width="240" height="104" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="231" y="240.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">AD DS</text><text x="231" y="265.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Computer account / LAPS data</text>
+<rect x="609" y="198" width="240" height="104" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="729" y="240.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">CLIENT01</text><text x="729" y="265.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Local administrator</text>
+<path d="M351 228 H609" fill="none" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#dark-arrow)"/>
+<text x="480" y="211" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">GPO applied</text>
+<path d="M729 311 V369 Q729 376 722 376 H238 Q231 376 231 369 V310" fill="none" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#blue-arrow)"/>
+<text x="480" y="365" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Password backup</text>
+<text x="480" y="440" fill="#171717" fill-opacity="0.6" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Check policy scope and delegated access.</text>
 </svg>
