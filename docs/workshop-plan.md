@@ -10,24 +10,11 @@
 
 ### Lab Topology (Logical)
 
-```text
-                  Microsoft Azure
-           Azure Arc / Update Manager
-                        |
-                  HTTPS / Internet
-                        |
-       +----------------+----------------+
-       |       Isolated Lab Network      |
-       |                                 |
-       | DC01       DC02                 |
-       | AD DS/DNS  Additional DC        |
-       |                                 |
-       | FS01             CLIENT01       |
-       | SMB/FSRM/DHCP    Windows 11     |
-       +---------------------------------+
+![AZ-802 On-premises and Azure Arc Lab Topology](images/lab-architecture.svg)
 
-       HV01 + Test VM = optional Hyper-V lab
-```
+*แต่ละ Pod ใช้ Network Segment แยกจากกัน เครื่องที่เชื่อม Azure Arc คือ FS01 ซึ่งจำลอง On-premises Server*
+
+
 
 - Domain ตัวอย่าง: **corp.example.test**
 - Lab VMs: DC01, DC02, FS01, CLIENT01; เพิ่ม HV01 เฉพาะกรณีทำ Hyper-V
