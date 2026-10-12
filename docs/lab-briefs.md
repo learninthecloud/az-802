@@ -17,6 +17,8 @@
 
 ## Lab 01 — Deploy an Additional Domain Controller (50 นาที)
 
+![AD DS replication from DC01 to DC02](images/lab-01-ad-ds.svg)
+
 **Requirement:** เพิ่ม DC เพื่อให้ Domain ไม่พึ่ง DC01 เครื่องเดียว และยืนยันว่า AD DS Replication ทำงานถูกต้อง
 
 **สิ่งที่ทำ**
@@ -38,6 +40,8 @@
 ---
 
 ## Lab 02 — Group Policy and Windows LAPS (45 นาที)
+
+![Group Policy and Windows LAPS](images/lab-02-gpo-laps.svg)
 
 **Requirement:** แยก Policy สำหรับ Client และจัดการ Local Administrator Password แบบไม่ใช้รหัสผ่านเดียวกันทุกเครื่อง
 
@@ -67,6 +71,8 @@
 
 ## Lab 03 — DNS and DHCP (45 นาที)
 
+![DNS and DHCP](images/lab-03-dns-dhcp.svg)
+
 **Requirement:** Client ต้องได้ IP Configuration ที่ถูกต้องและติดต่อบริการภายในด้วย DNS Name ได้
 
 **สิ่งที่ทำ**
@@ -90,6 +96,8 @@
 
 ## Lab 04 — Secure File Services (70 นาที)
 
+![Secure File Services](images/lab-04-file-services.svg)
+
 **Requirement:** แผนก Finance และ HR ใช้ Share เดียวกันได้ แต่เห็นและแก้ไขเฉพาะข้อมูลที่ได้รับอนุญาต
 
 **สิ่งที่ทำ**
@@ -112,6 +120,8 @@
 
 ## Lab 05 — Hyper-V Basics (35 นาที, Conditional)
 
+![Hyper-V checkpoints and virtual switch](images/lab-05-hyper-v.svg)
+
 **Requirement:** จัดการ Network และ Recovery Point ของ VM ทดสอบได้
 
 **สิ่งที่ทำ**
@@ -132,6 +142,8 @@
 ---
 
 ## Lab 06 — Azure Arc and Update Manager (45 นาที)
+
+![Azure Arc and Update Manager](images/lab-06-azure-arc.svg)
 
 **Requirement:** ดูแล On-premises Windows Server ผ่าน Azure ได้อย่างน้อยในส่วน Inventory/Connection และ Update Assessment
 
@@ -161,6 +173,8 @@
 
 ## Lab 07 — Monitoring and Diagnostics (35 นาที)
 
+![Windows Server monitoring and troubleshooting](images/lab-07-monitoring.svg)
+
 **Requirement:** ตรวจ Health ของ Server และหาหลักฐานที่เกี่ยวข้องกับปัญหาได้ก่อนเริ่ม Incident
 
 **สิ่งที่ทำ**
@@ -179,6 +193,8 @@
 ---
 
 ## Final Challenge — Diagnose and Recover (40 นาที)
+
+![Troubleshooting scenario and validation](images/final-challenge.svg)
 
 ### Incident
 
