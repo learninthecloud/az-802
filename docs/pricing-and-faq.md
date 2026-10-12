@@ -24,9 +24,9 @@
 
 ### Track 1 กับ Track 2 ต่างกันอย่างไร?
 
-Track 1 เน้นการดูแล Windows Server ให้ใช้งานได้ เช่น AD DS, Group Policy, DNS/DHCP, File Server, Azure Arc และ Troubleshooting
+Track 1 เน้น Windows Server Administration ได้แก่ First/Additional DC, AD Sites, FSMO, Users/Groups, GPO, Windows Admin Center, DNS, DHCP Failover, File Share/FSRM/DFS, Server Hardening/LAPS, Monitoring และ Troubleshooting
 
-Track 2 เน้น Advanced Infrastructure เช่น Failover Cluster, S2D, Nested Hyper-V และ SMB over QUIC โดยผู้เรียนใช้ VM Images ที่เตรียมไว้เพื่อโฟกัสที่ Feature ไม่ใช่การลง OS
+Track 2 เน้น Advanced & Hybrid ได้แก่ Azure Arc/Update Manager, Hyper-V/Nested Virtualization, Azure VM/VMSS, Azure Files/File Sync, S2D และ Hybrid Identity (Entra Connect Sync, Entra Password Protection for AD DS, AD Hardening/Delegation) โดยใช้ Prepared VM Images เพื่อไม่เสียเวลาติดตั้ง OS
 
 ### ต้องเรียน Track 1 ก่อนหรือไม่?
 
@@ -40,13 +40,19 @@ Track 2 เน้น Advanced Infrastructure เช่น Failover Cluster, S2D,
 
 2 วัน (วันละ Track) และมี Recorded Video/Pre-work ตามหัวข้อ ไม่ใช่คอร์ส 2 Track ที่ยัดรวมในวันเดียว
 
+### ต้องใช้ Server กี่เครื่องใน Track 2?
+
+ใน Logical Architecture มี DC01, SYNC01 (Entra Connect), FS01 (File Server/File Sync/Witness), S2D01, S2D02 และ CLIENT01 โดยทดลองบน Azure VM ขนาดใหญ่ที่เป็น Nested Hyper-V Host
+
+**Logical Roles ไม่ใช่จำนวน VM จริงที่ผู้เรียนต้องสร้างทั้งหมด** ผู้สอนเตรียม Guest VM Images ไว้ก่อน และสามารถรวม Roles บางส่วนเพื่อประหยัด Resources ได้ตามความเหมาะสม [ดู Lab Topology](lab-topology.md)
+
 ### Track 2 ต้องติดตั้ง Windows Server ใหม่ในห้องไหม?
 
 **ไม่ต้อง** ผู้สอนเตรียม Images และ Guest VMs ไว้แล้ว บท Nested Hyper-V ตั้งเป้าสร้าง **Virtual Machine เปล่าโดยไม่ติดตั้ง Guest OS** ส่วน S2D ตั้งเป้า Enable/สร้าง Storage ให้เห็นผล ไม่ใช่สร้าง Production Cluster ทั้งระบบ
 
 ### S2D จะมี Failover Test และ Live Migration หรือไม่?
 
-ไม่ใช่ Outcome ที่บังคับของ Track 2 รุ่น 1 วัน ผู้เรียนจะฝึก Enable/Configure และ Verify Cluster/S2D ก่อน ส่วน HA/DR ขั้นสูงอาจเป็น Demo หรือหัวข้อในหลักสูตรต่อยอด
+ไม่ใช่ Outcome ที่บังคับของ Track 2 รุ่น 1 วัน ผู้เรียนจะฝึก Enable/Configure และ Verify Cluster/S2D ก่อน ส่วน HA/DR ขั้นสูงไม่อยู่ในรายการ Hands-on หลักของ Track 2
 
 ### มีคอมพิวเตอร์ Lab ให้ไหม?
 
