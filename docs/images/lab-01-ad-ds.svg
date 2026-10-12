@@ -1,20 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Two Active Directory domain controllers with bidirectional replication and validation commands.">
-<title>01  Active Directory</title>
-<desc>Two Active Directory domain controllers with bidirectional replication and validation commands.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="DC01 and DC02 linked by bidirectional replication; health validation below.">
+<title>01 / Active Directory</title>
+<desc>DC01 and DC02 linked by bidirectional replication; health validation below.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">01  Active Directory</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Add a domain controller; verify replication</text>
-<rect x="100" y="174" width="290" height="148" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="245" y="230.5" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">DC01</text><text x="245" y="255.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Existing domain controller</text><text x="245" y="280.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">DNS  /  FSMO roles</text>
-<rect x="570" y="174" width="290" height="148" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="715" y="230.5" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">DC02</text><text x="715" y="255.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Additional domain controller</text><text x="715" y="280.5" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">DNS  /  SYSVOL</text>
-<line x1="400" y1="224" x2="560" y2="224" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="560" y1="272" x2="400" y2="272" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="480" y="201" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">AD DS replication</text>
-<text x="480" y="304" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" letter-spacing="0">Bidirectional</text>
-<text x="100" y="392" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="start" letter-spacing="0">Verify</text>
-<line x1="100" y1="408" x2="860" y2="408" stroke="#C8C8C8" stroke-width="1"/>
-<text x="100" y="435" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">repadmin /replsummary</text>
-<text x="388" y="435" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">dcdiag</text>
-<text x="635" y="435" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">netdom query fsmo</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">01 / Active Directory</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">A second DC is useful only when replication is healthy.</text>
+<rect x="164" y="188" width="250" height="114" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="289" y="235.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">DC01</text><text x="289" y="260.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Existing domain controller</text>
+<rect x="546" y="188" width="250" height="114" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="671" y="235.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">DC02</text><text x="671" y="260.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Additional domain controller</text>
+<line x1="426" y1="226" x2="533" y2="226" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<line x1="533" y1="265" x2="426" y2="265" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<text x="480" y="210" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Replication</text>
+<text x="480" y="350" fill="#171717" fill-opacity="0.75" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">Validate both directions.</text>
+<text x="480" y="385" fill="#171717" fill-opacity="0.55" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">repadmin   ·   dcdiag</text>
 </svg>
