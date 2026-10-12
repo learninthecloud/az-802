@@ -1,131 +1,92 @@
-# Track 2 — Advanced Infrastructure (Proposed)
+# Track 2 — Advanced Infrastructure
 
-> Course design proposal · 12 October 2026. ยังไม่ใช่กำหนดการหรือคำยืนยันว่า Lab ทุกหัวข้อพร้อมเปิดสอน
+**Hands-on Project Workshop | Windows Server 2025**
 
-**Format:** Recorded Video (Pre-work) + Onsite Workshop 1 วัน 09:00–17:00
-**Platform:** Windows Server 2025, Hyper-V, Active Directory, Microsoft Azure (เฉพาะบาง Demo)
-**Project:** Build a Resilient Windows Server Infrastructure
+ออกแบบมาสำหรับผู้ดูแล Windows Server ที่ต้องการเข้าใจ Feature ขั้นสูง โดยเน้น **ลงมือ Configure และเห็นผลลัพธ์จริง** ไม่ใช่การติดตั้งทุกระบบตั้งแต่ศูนย์
 
-![Advanced S2D cluster mental model](images/advanced-s2d-cluster.svg)
+**เวลา:** 1 วัน 09:00–17:00  
+**ค่าเรียนที่เสนอ:** 5,750 บาท หรือรวมกับ Track 1 เป็นแพ็กเกจ 8,625 บาท  
+**สถานะ:** อยู่ระหว่างเตรียม Lab และทดสอบรอบเต็ม
 
-## เป้าหมาย
+![Track 2 — S2D Cluster](images/advanced-s2d-cluster.svg)
 
-จาก Track 1 ที่เน้น Deploy, Configure, Validate และ Troubleshoot ไปสู่ **High Availability, Resilience, Disaster Recovery และ Secure Access** โดยให้ผู้เรียนอธิบายได้ว่าอะไรยังทำงานต่อเมื่อ Node/Storage/Network บางส่วนล้มเหลว และอะไรยังต้องใช้ Recovery Process
+## Project Scenario
 
-Track 2 **ไม่จำเป็นต้องเรียน Track 1 ก่อน** หากมีความรู้ Windows Server/AD DS/DNS/SMB, PowerShell และ Hyper-V เทียบเท่า แต่ควรทำ Pre-work/Readiness Check
+องค์กรกำลังสำรวจการใช้ Windows Server 2025 เพื่อทำ Storage, Virtualization และ Secure File Access ที่มีความสามารถสูงขึ้น ผู้เรียนทดลองกับ Windows Server VM Images ที่เตรียมไว้แล้วบน Hyper-V Host ใน Microsoft Azure
 
-## Track 1 vs Track 2
+**Lab Goal:** สร้าง Cluster/S2D ให้พร้อมตรวจผลได้ ทดลองสร้าง Empty VM และเรียนรู้แนวทางเข้าถึง File Share ผ่าน SMB over QUIC
 
-| | Track 1 — Administration | Track 2 — Advanced Infrastructure |
+Workshop นี้เน้น **Feature Enablement & Verification** ไม่ได้อ้างว่าผู้เรียนได้ทดสอบความทนทานของ Production Cluster หรือติดตั้ง OS ใหม่ภายในวันเรียน
+
+## Hands-on Topics
+
+| Lab | ทำอะไร | ผลที่ตรวจได้ |
 |---|---|---|
-| Outcome | Configure service and verify it works | Prove failure behavior and recovery boundary |
-| Labs | AD DS, GPO/LAPS, DNS/DHCP, SMB, Azure Arc, Diagnostics | Failover Cluster, S2D/CSV, Node Failure, Live Migration, SMB over QUIC |
-| Duration | 1 วัน | 1 วันแบบเข้มข้น (ต้องเตรียม Environment) |
-| Main question | ทำงานได้ไหม? | เมื่อมีความเสียหาย ระบบยังให้บริการได้แค่ไหน? |
+| A01 — Failover Cluster | ตรวจ Nodes/Network และสร้าง Cluster + Quorum Witness จาก Guest VMs ที่เตรียมไว้ | Cluster Status, Nodes, Witness |
+| **A02 — Storage Spaces Direct** | Enable S2D, ตรวจ Storage Pool และทดลอง Create Virtual Disk/Volume ตามเวลา | Storage Pool / Virtual Disk ถูกสร้างและ Health อยู่ในสถานะที่คาดไว้ |
+| **A03 — Nested Hyper-V** | ดู Architecture ของ Azure VM ที่เป็น Hyper-V Host, สร้าง Virtual Switch, VHDX และ Generation 2 VM เปล่า | VM ถูกสร้างใน Hyper-V Manager/PowerShell โดย **ไม่ติดตั้ง OS** |
+| **A04 — SMB over QUIC** | เชื่อมต่อ SMB Share ด้วย QUIC ใน Test Network ที่เตรียม Certificate/DNS ไว้แล้ว | ตรวจสอบ Transport และ Share Access |
+| A05 — Advanced Feature Showcase | สาธิต **Storage Replica หรือ Hyper-V Replica** ด้วย Environment ที่เตรียมไว้ | เห็นการทำงานและเข้าใจ Use Case/ข้อจำกัด |
+| Final — Review | ตรวจผลและอธิบายว่า Feature ใดเหมาะกับ Requirement แบบใด | Checklist / Result Summary |
 
-## WOW Feature Backlog
+**หมายเหตุ:** A05 เป็น Guided Demo ไม่ใช่การติดตั้ง/Configure Replication ตั้งแต่ต้นจนจบ และเนื้อหาที่อาจเปลี่ยนตาม Lab Readiness จะยืนยันก่อนเปิดรุ่น
 
-| Feature | สิ่งที่ผู้เรียนจะได้เห็น | Priority | Delivery |
-|---|---|---|---|
-| Storage Spaces Direct (S2D) | Local Disks บนหลาย Node รวมเป็น Resilient Pool | Must | Core hands-on |
-| Failover Clustering + Quorum + CSV | Cluster Node ถูกหยุด แต่ Storage/Clustered Workload มี Recovery Behavior ที่ตรวจสอบได้ | Must | Core hands-on |
-| Hyper-V Highly Available VM / Live Migration | ย้าย Running VM ระหว่าง Hosts | Must learning objective | Hands-on เมื่อมี Cluster ที่เตรียมไว้; ไม่พร้อมให้ Instructor Demo |
-| SMB over QUIC | Windows 11 เข้า File Share ผ่าน UDP 443 โดยไม่ต้องเปิด TCP 445 ใน Test Path | Must | Core hands-on |
-| Storage Replica | Replicate Volume สำหรับ Site-level DR | Should | Guided Demo / Extended Lab |
-| Hyper-V Replica | Replicate VM และทดสอบ VM Recovery | Should | Guided Demo / Extended Lab |
-| Azure File Sync / Cloud Tiering | Local Cache ร่วมกับ Cloud File Share | Should | Extended Lab |
-| Windows Server 2025 Hotpatch + Azure Arc | Update บางประเภทโดยไม่ต้อง Restart | Should | Enrollment/Status Demo |
-| AD Recovery: Recycle Bin / DSRM / SYSVOL | กู้ Objects หรือแก้ปัญหา AD | Should | Advanced Identity Extension |
-| JEA / OSConfig / Credential Guard | Least-privilege Admin / Security Hardening | Should | Security Extension |
-| SMB Direct / RDMA / SET | ออกแบบ Low-latency Storage Networking | Demo | Hardware-dependent |
-| ReFS / Storage QoS / Dedup | Storage Efficiency และ Performance | Optional | Video / Extension |
-| RODC / Trust / AD Sites | Multi-site and multi-forest scenarios | Optional | Identity Extension |
-| GPU Partitioning / Azure Local | Advanced virtualization platform capabilities | Future | Separate course |
+## Workshop Schedule (Tentative)
 
-**อย่าพยายามทำทุก Feature ภายใน 1 วัน**; Core Hands-on ต้องทำแล้วมีหลักฐานตรวจผลได้ ส่วน Optional/Extended ให้มี Video หรือ Advanced 2-day รุ่นถัดไป
+| เวลา | กิจกรรม |
+|---|---|
+| 09:00–09:20 | Requirements, Architecture & Access Lab |
+| 09:20–10:00 | A01 — Failover Clustering / Witness |
+| 10:00–11:10 | A02 — Enable Storage Spaces Direct |
+| 11:10–12:00 | A02 — Storage Pool, Virtual Disk & Validation |
+| 12:00–13:00 | Lunch |
+| 13:00–13:50 | A03 — Nested Hyper-V: Create Empty VM |
+| 13:50–14:40 | A04 — SMB over QUIC |
+| 14:40–15:00 | Break |
+| 15:00–15:45 | A05 — Storage Replica หรือ Hyper-V Replica (Guided Demo) |
+| 15:45–16:25 | Troubleshooting / Review Health ของระบบที่สร้าง |
+| 16:25–17:00 | Final Validation & Architecture Discussion |
 
-## Draft Schedule — 09:00–17:00
+ตารางนี้เป็นแผนที่ต้องผ่าน Full Dry Run ก่อนประกาศเป็นกำหนดการจริง
 
-| Time | Duration | Topic | Evidence / Output |
-|---|---:|---|---|
-| 09:00–09:20 | 20m | Scenario / Failure Domains / RTO-RPO | ระบุ Success Criteria |
-| 09:20–10:20 | 60m | A01 — Failover Cluster, Validation, Witness | Cluster/Nodes/Quorum Healthy |
-| 10:20–11:45 | 85m | A02 — S2D Storage Pool + ReFS/CSV | Virtual Disk และ CSV Online |
-| 11:45–12:00 | 15m | Storage Checkpoint | Storage Health Evidence |
-| 12:00–13:00 | 60m | Lunch | — |
-| 13:00–13:55 | 55m | A03 — Controlled Node Failure / Recovery | ขอบเขตความทนทานและการฟื้นตัว |
-| 13:55–14:45 | 50m | A04 — Hyper-V Live Migration (Conditional) | Running VM ย้ายระหว่าง Hosts |
-| 14:45–15:00 | 15m | Break | — |
-| 15:00–15:55 | 55m | A05 — SMB over QUIC | ตรวจ Connection ผ่าน QUIC |
-| 15:55–16:25 | 30m | DR Showcase — Storage Replica **หรือ** Hyper-V Replica | อธิบาย Recovery Workflow |
-| 16:25–17:00 | 35m | Final Incident / Review | Root Cause + Validation |
+## WOW Features ที่จะรู้จักเพิ่มเติม
 
-**สถานะ:** Pilot Target เท่านั้น; ต้องจับเวลา Dry Run กับจำนวน Pods และ Network จริงก่อนเปิดขาย
+| Feature | สิ่งที่ช่วยให้ทำได้ | รูปแบบใน Track 2 |
+|---|---|---|
+| **S2D / ReFS / CSV** | ใช้ Storage ของหลาย Nodes และจัดการ Cluster Storage | Hands-on (การสร้าง/ตรวจสอบ) |
+| **SMB over QUIC** | เชื่อม File Share ผ่าน UDP 443 โดยไม่เปิด TCP 445 ในเส้นทางทดสอบ | Hands-on เมื่อ Lab พร้อม |
+| **Nested Hyper-V** | เข้าใจการทำ Hyper-V ภายใน VM และกำหนด VM Generation/Virtual Disk | Hands-on สร้าง VM เปล่า |
+| **Storage Replica** | Replicate Data ระหว่าง Servers หรือ Sites | Guided Demo (เลือกหนึ่งใน A05) |
+| **Hyper-V Replica** | Replicate VM สำหรับ Recovery | Guided Demo (เลือกหนึ่งใน A05) |
+| **Live Migration / Hyper-V HA** | เคลื่อนย้ายหรือให้บริการ VM ผ่าน Cluster | Concept / Future Extended Workshop |
+| **Hotpatch / Azure Arc** | ตรวจ Update Management Workflow และลด Reboots สำหรับ Updates ที่รองรับ | Video / Optional Demo |
+| **Azure File Sync / Cloud Tiering** | ใช้ Azure Files ร่วมกับ File Server เดิม | Video / Future Extension |
+| **JEA / Credential Guard / OSConfig** | เพิ่มความปลอดภัยและลดขอบเขตสิทธิ์ Administrator | Video / Future Security Extension |
+| **RDMA / SMB Direct / SET** | เพิ่มประสิทธิภาพ Storage Networking | Concept / Hardware-dependent Demo |
 
-## Lab Expectations
+## Prerequisites ของผู้เรียน
 
-### A01 — Failover Cluster / Quorum
-- ตรวจ Cluster Nodes, Name Resolution และ Cluster Validation
-- เตรียม File Share/Cloud Witness แล้วให้ผู้เรียนตรวจ Quorum Configuration
-- Evidence: Cluster Validation Report, Cluster Nodes/Quorum Status
+- ใช้งาน Windows Server, AD DS, DNS และ PowerShell ได้
+- เข้าใจ Disk/Volume, NTFS/ReFS, SMB และ Virtualization Basics
+- ใช้งาน Remote Console / Hyper-V Manager ตามแนวทางที่สอนได้
+- มี Laptop สำหรับเข้าถึง Lab; ผู้สอนจัดเตรียม VM Images และระบบตามเงื่อนไขของคอร์ส
 
-### A02 — S2D / Storage Resiliency
-- ตรวจ Disks ที่เตรียมไว้บน 2 Nodes (แยก OS Disk ออกจาก Data Disks)
-- เปิด S2D/ตรวจ Storage Pool, Virtual Disk, ReFS Volume และ CSV
-- Evidence: Storage Pool Health, Volume Health และ CSV Path
-- ไม่ให้ผู้เรียนรันคำสั่งลบดิสก์โดยไม่มี Disk Inventory/Scope ของ Disposable Lab Disk
+## Lab Architecture และข้อจำกัด
 
-### A03 — Failure and Recovery
-- ทำ Planned Drain หรือ Controlled Node Outage ใน Pod ที่แยกจากระบบจริง
-- ตรวจความเปลี่ยนแปลงของ Quorum, Storage, Clustered Workload และ Client Behavior
-- ต้องมี **Workload ที่รองรับและถูก Cluster แล้ว** ก่อนจะอ้างว่า Service Continues
-- การที่ CSV Online ไม่เท่ากับทุก Application ไม่มี Downtime
+- ใช้ **Azure VM ขนาดใหญ่ที่รองรับ Nested Virtualization** เป็น Hyper-V Host และเตรียม Guest Images ไว้ก่อน
+- Guest S2D Cluster ตั้งเป้า 2 Windows Server Datacenter Nodes + Witness โดยมี Virtual Data Disks อย่างน้อย 2 ลูกต่อ Node นอกเหนือจาก OS Disk
+- **S2D เป้าหมายคือ Create + Verify** ไม่จำเป็นต้องทดสอบ Production Failure Scenario, Live Migration, Hyper-V HA หรือ Disaster Recovery เต็มรูปแบบ
+- Azure Hyper-V Host → Prepared Guest VMs → Lab Exercises. บท Nested Hyper-V ให้สร้าง **VM เปล่า** บน Hyper-V Instance ที่ Instructor ตรวจว่าใช้งานได้; ไม่บังคับให้เปิด VM/ติดตั้ง Guest OS
+- ถ้าต้องทำ Virtualization เพิ่มอีกระดับ **ภายใน Guest VM ที่ถูก Nested อยู่แล้ว** ต้องตรวจ CPU Extensions และ Hyper-V Compatibility เพิ่มเติมก่อน ไม่รับประกันการทำ Triple-Nesting
+- การรัน Guest S2D Nodes บน Azure VM Host เดียวช่วยประหยัดค่าใช้จ่ายและใช้สอน Concept ได้ แต่ **ไม่ได้ให้ Host-level Fault Tolerance** และไม่ใช่ Production Deployment Model
+- Microsoft ระบุว่า **Host-level Virtual Disk Snapshot/Restore ไม่รองรับ** สำหรับ S2D Guest Cluster; ผู้สอนต้องทดสอบการ Reset/Rebuild และ Backup Strategy ที่เหมาะสม
+- ก่อนเปิดรุ่นต้องยืนยัน Azure VM Size, CPU/RAM/Disk IOPS, Host Security Type = Standard, Outbound/Guest Networking, Windows Licensing และ VM Capacity ของจำนวนผู้เรียนจริง
 
-### A04 — Hyper-V Live Migration
-- ใช้ Hyper-V Cluster ที่เตรียมไว้แยกจาก S2D VM Guest Cluster ได้ เพื่อหลีกเลี่ยง Double-nesting และภาระ Compute
-- ตรวจ Owner Node และ Client Connectivity ระหว่าง Migration
-- แยก Planned Live Migration ออกจาก Unplanned Failover
-- ถ้า Shared Instructor Cluster เท่านั้น ให้ระบุชัดว่าเป็น Demo ไม่ใช่ทุกคนได้ทำ Hands-on
+### Microsoft Learn References
 
-### A05 — SMB over QUIC
-- Windows Server 2025 + Windows 11 + Trusted Certificate + DNS + UDP/443 ใน Isolated Test Network
-- จำลอง Remote Client โดย Block TCP/445 ในเส้นทางทดสอบ
-- ตรวจว่า SMB ใช้ QUIC จริง และสิทธิ์เข้าถึง File Share ยังถูกต้อง
-- การใช้ QUIC ไม่ได้ทำให้ Authentication/Authorization ไม่จำเป็น; สำหรับ External Kerberos Access ต้องออกแบบ KDC Proxy อย่างเหมาะสม
-
-### DR Showcase — เลือกหัวข้อเดียว
-- Storage Replica: Sync/Async, Data Volume vs Log Volume, Failover และ RPO/RTO
-- Hyper-V Replica: Replication Health, Test/Planned Failover, Recovery Point
-- 30 นาทีใช้ Environment ที่ Replicate ไว้ก่อน; ไม่ใช่ Full Deployment
-- Replication ไม่ใช่ Backup; ต้องมี Backup/Restore และการป้องกัน Logical Corruption แยก
-
-## Prerequisites ที่ต้องยืนยันก่อนเปิด Track 2
-
-1. **S2D ต้องใช้ Windows Server Datacenter Edition**; Windows Server Standard ไม่เพียงพอ
-2. S2D Guest VM Cluster รองรับ **2–3 Nodes**; แบบ 2 Nodes **ต้องมี Witness**
-3. ใน VM Guest Cluster ต้องมีอย่างน้อย **2 Virtual Data Disks ต่อ Node** และใช้สภาพแวดล้อม Disk/Network ที่ผ่าน Preflight
-4. เอกสาร Microsoft ระบุว่า **Host-level Virtual Disk Snapshot/Restore ไม่รองรับ** สำหรับ S2D Guest VM Cluster: จึงต้องออกแบบ Reset/Rebuild/Guest-aware Backup แทน
-5. ถ้า S2D Nodes เป็น VMs ที่อยู่บน Physical Host เดียวกัน การปิด Node หนึ่งเครื่องเป็นเพียง **Guest Node Failure Simulation** ไม่สามารถอ้างความทนทานต่อ Host Failure ได้
-6. Production S2D ต้องใช้ Hardware/Network ที่ตรวจสอบความเข้ากันได้; VM Workshop เป็น **Evaluation Lab** ไม่ใช่ Certified Production Reference
-7. Live Migration Lab ต้องมี Hyper-V Hosts/Storage/Network ที่รองรับและผ่านการทดสอบ; อาจต้องใช้ Shared Instructor Cluster แทน Pod ส่วนตัว
-8. สำหรับ 20–25 คน ต้องทำ Capacity/Cost Test ก่อนเลือกระหว่าง 10–13 Pods กับ Shared Cluster + Group Rotation
-9. Hotpatch บางเดือนเป็น Baseline Update ซึ่งยังต้อง Restart; ไม่รับประกันว่าจะมี Patch ให้ติดตั้งจริงในวันเรียน
-
-## Next Steps
-
-- [ ] Smoke Test A01–A03 บน 2-Node S2D Guest Cluster จริง
-- [ ] ทดสอบ Witness, Node Outage, Cluster Health และ Recovery
-- [ ] ตัดสินใจว่าจะให้ทุกกลุ่มทำ Live Migration หรือใช้ Instructor Cluster
-- [ ] เตรียม Certificate, QUIC Server/Client และ Packet/Connection Validation
-- [ ] ทดลอง Runtime/Cost กับจำนวนผู้เรียนเป้าหมาย
-- [ ] ทำ Student Guide + Expected Results + Reset/Rebuild Plan
-- [ ] พิจารณา **Advanced Extended 2-Day** สำหรับ Live Migration, Storage Replica, Hyper-V Replica, Recovery และ Hybrid Advanced Features เต็มรูปแบบ
-
-## Microsoft References
-
-- [AZ-802 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802)
-- [Deploy S2D](https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)
-- [S2D in Guest VMs](https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-in-vm)
-- [Hyper-V Live Migration](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/live-migration-overview)
+- [Storage Spaces Direct: Deployment](https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)
+- [Storage Spaces Direct in Guest VMs](https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-in-vm)
+- [Nested Virtualization](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enable-nested-virtualization)
 - [SMB over QUIC](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-over-quic)
-- [Arc-enabled Hotpatch](https://learn.microsoft.com/en-us/windows-server/get-started/enable-hotpatch-azure-arc-enabled-servers)
+
+> **Track 2 is an evaluation/training lab.** ไม่ใช่ Hardware-certified หรือ Production HA Architecture Reference
