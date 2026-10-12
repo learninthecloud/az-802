@@ -4,7 +4,7 @@
 
 **รูปแบบ:** Recorded Video/Pre-work + Onsite Workshop 1 วัน (09:00–17:00)  
 **Lab Platform:** Windows Server 2025, Windows 11 และ Microsoft Azure  
-**ราคาเสนอ:** 5,750 บาท หรือแพ็กเกจ 2 Tracks ราคา 8,625 บาท
+**ราคาเสนอ:** 5,750 บาท/Track หรือแพ็กเกจ 2 Tracks ราคาปกติ 9,900 บาท (Early Bird 8,625 บาท ตามเงื่อนไขที่ประกาศ)
 
 ![Track 1 — Windows Server Lab Architecture](images/lab-architecture.svg)
 
