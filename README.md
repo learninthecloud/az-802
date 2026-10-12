@@ -51,6 +51,14 @@
 
 [รายละเอียดแพ็กเกจและคำถามที่พบบ่อย](docs/pricing-and-faq.md)
 
+## Selected AZ-802 Lab Coverage
+
+คัดเลือก **18 Skill Objectives / 34 Activities** จากหัวข้อสอบ AZ-802 เพื่อใช้เป็นขอบเขตในการพัฒนา Recorded Video และ Hands-on ทั้งสอง Tracks เช่น AD DS, AD Sites, FSMO, Windows Admin Center, Azure VM/VMSS, DHCP Failover, DFS, Azure File Sync, S2D, Windows LAPS และ Hybrid Identity
+
+รายการนี้เป็น **Lab Catalog** ไม่ใช่การรับประกันว่าผู้เรียนจะได้ทำครบ 34 Activities ตั้งแต่ต้นจนจบภายใน 2 วัน โดยบางหัวข้อจะใช้ Prepared Images หรือ Guided Demo ตามความเหมาะสม
+
+[ดูรายการ Lab ทั้ง 18 หัวข้อและรูปแบบการฝึก](docs/lab-catalog.md)
+
 ## แนวทางการเรียน
 
 - **ก่อนมา Onsite:** ดู Recorded Video/Pre-work และทบทวนเนื้อหาพื้นฐานของ Track ที่เลือก
@@ -71,6 +79,7 @@ Lab Environment ใช้ Windows Server 2025 และ Microsoft Azure โด�
 - [Track 1 — Workshop Schedule](docs/workshop-plan.md)
 - [Track 1 — Lab Topics](docs/lab-briefs.md)
 - [Track 2 — Advanced Infrastructure](docs/advanced-track.md)
+- [Selected 18 AZ-802 Lab Objectives](docs/lab-catalog.md)
 - [ค่าเรียนและ FAQ](docs/pricing-and-faq.md)
 
 **Reference:** [Microsoft Learn — AZ-802 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802)
