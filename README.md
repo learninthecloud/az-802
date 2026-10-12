@@ -56,7 +56,7 @@ Workshop เน้นให้ทำงานที่เลือกมาไ�
 | | |
 |---|---|
 | ![01 Active Directory](docs/images/lab-01-ad-ds.svg) | ![02 Group Policy and LAPS](docs/images/lab-02-gpo-laps.svg) |
-| [01 — Active Directory](docs/lab-briefs.md#lab-01--deploy-an-additional-domain-controller-50-นาที) | [02 — GPO & Windows LAPS](docs/lab-briefs.md) |
+| 01 — Active Directory | 02 — GPO & Windows LAPS |
 | ![03 DNS and DHCP](docs/images/lab-03-dns-dhcp.svg) | ![04 File Services](docs/images/lab-04-file-services.svg) |
 | 03 — DNS & DHCP | 04 — File Services |
 | ![05 Hyper-V](docs/images/lab-05-hyper-v.svg) | ![06 Azure Arc](docs/images/lab-06-azure-arc.svg) |
@@ -64,7 +64,7 @@ Workshop เน้นให้ทำงานที่เลือกมาไ�
 | ![07 Monitoring](docs/images/lab-07-monitoring.svg) | ![Final Challenge](docs/images/final-challenge.svg) |
 | 07 — Monitoring | Final Challenge |
 
-ภาพทั้งหมดใช้ SVG ขาวดำและ Segoe UI อ่านรายละเอียดโจทย์และวิธีตรวจผลใน [Lab Briefs](docs/lab-briefs.md)
+ภาพประกอบใช้พื้นหลังขาว เส้นดำ และสีฟ้าเฉพาะจุดสำคัญ ตัวอักษร Segoe UI สูงสุด 16px และกรอบมุมมน 5px อ่านรายละเอียดโจทย์และวิธีตรวจผลใน [Lab Briefs](docs/lab-briefs.md) หรือดู [Visual Guidelines](docs/images/README.md)
 
 ## เอกสารหลักสูตร
 
