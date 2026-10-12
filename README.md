@@ -53,6 +53,12 @@ Workshop แบ่งเป็น **2 Tracks** เลือกเรียนแ
 
 [รายละเอียดหลักสูตรและคำถามที่พบบ่อย](docs/pricing-and-faq.md)
 
+## เนื้อหา AZ-802 ที่คัดเลือก
+
+หลักสูตรใช้ **18 Skill Objectives / 34 Activities** เป็นขอบเขตสำหรับ Recorded Video และ Labs ทั้งสอง Tracks โดยแยกงานที่ทำเองออกจาก Guided Labs ตามเวลาและ Prerequisites ที่ใช้
+
+[รายละเอียดหัวข้อทั้ง 18 Objectives](docs/lab-catalog.md)
+
 ## วิธีเรียน
 
 1. **Recorded Video / Pre-work:** Concepts, Prerequisites และ Demo ที่ใช้เวลานาน
