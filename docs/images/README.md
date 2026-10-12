@@ -13,8 +13,8 @@
 | Font weight | 400 (regular) และ 600 (semibold) |
 | Shape | กรอบสี่เหลี่ยมมุมมน **5px** เป็นค่าหลัก; อนุญาต 3–7px |
 | Lines | บางประมาณ 1.2–1.4px; เส้นประใช้เฉพาะความสัมพันธ์แบบไม่ตรงหรือ Boundary |
-| Canvas | SVG 960 × 500, พื้นหลังขาว, เว้นพื้นที่ว่างอย่างตั้งใจ |
-| Content | หนึ่งภาพต่อหนึ่งแนวคิด; ป้ายสั้น; ไม่อธิบายทุกขั้นตอน |
+| Canvas | SVG (ขนาดปรับตามจำนวน Roles ที่ต้องสื่อ), พื้นหลังขาว, เว้นพื้นที่ว่างอย่างตั้งใจ |
+| Content | หนึ่งภาพต่อหนึ่งแนวคิด; สำหรับ Topology ให้แสดง Logical Roles และแยกภาพใหญ่/ภาพเจาะลึก |
 
 ### ควรหลีกเลี่ยง
 
@@ -27,8 +27,9 @@
 
 ## Diagram index
 
-- [Advanced S2D cluster](advanced-s2d-cluster.svg)
-- [Track 1 Lab architecture](lab-architecture.svg)
+- [Track 1 — Complete logical server roles](lab-architecture.svg)
+- [Track 2 — Complete hybrid architecture](advanced-track-architecture.svg)
+- [Track 2 — S2D dependencies](advanced-s2d-cluster.svg)
 - [01 — Active Directory](lab-01-ad-ds.svg)
 - [02 — GPO and Windows LAPS](lab-02-gpo-laps.svg)
 - [03 — DNS and DHCP](lab-03-dns-dhcp.svg)
