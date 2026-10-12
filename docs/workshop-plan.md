@@ -1,42 +1,37 @@
-# Track 1 — Onsite Workshop (09:00–17:00)
+# Track 1 — Administration Workshop (09:00–17:00)
 
-**Scenario:** Deploy and Secure a Hybrid Windows Server Infrastructure
+**Project:** Build and Manage a Windows Server Domain Infrastructure
 
-บริษัทต้องการเพิ่ม Domain Controller, ควบคุมการตั้งค่าเครื่อง Client, ให้บริการ File Share พร้อมสิทธิ์การเข้าถึงที่เหมาะสม และจัดการ On-premises Windows Server ผ่าน Azure
+![Track 1 — Lab Topology](images/lab-architecture.svg)
 
-![Track 1 Topology](images/lab-architecture.svg)
+## Schedule (Tentative)
 
-## ตาราง Workshop
-
-| เวลา | หัวข้อ | ผู้เรียนจะได้ทำอะไร |
+| เวลา | Lab Session | Selected Objectives |
 |---|---|---|
-| 09:00–09:20 | Architecture / Requirements | เข้าใจระบบที่ต้องสร้างและตรวจ Environment |
-| 09:20–10:10 | Lab 01 — Active Directory | เพิ่ม DC และตรวจ Replication |
-| 10:10–10:55 | Lab 02 — GPO & Windows LAPS | ตั้ง Policy และตรวจว่า Applied |
-| 10:55–11:40 | Lab 03 — DNS & DHCP | ตั้ง Network Services และทดสอบจาก Client |
-| 11:40–12:00 | Validation / Q&A | ตรวจระบบช่วงเช้า |
-| 12:00–13:00 | Lunch | พักกลางวัน |
-| 13:00–14:10 | Lab 04 — File Services | SMB Share, Share/NTFS Permissions, FSRM (ตามเวลา) |
-| 14:10–14:45 | Lab 05 — Hyper-V (Conditional) | Virtual Switch / VM Checkpoint หรือ Demo สำรอง |
-| 14:45–15:00 | Break | พัก |
-| 15:00–15:45 | Lab 06 — Hybrid Management | Azure Arc และ Update Manager Assessment |
-| 15:45–16:20 | Lab 07 — Monitoring | Event Logs, Performance และ Diagnostics |
-| 16:20–17:00 | Final Challenge | วิเคราะห์และแก้โจทย์ Incident |
+| 09:00–09:20 | Scenario, Access Check, Roles and Requirements | Intro |
+| 09:20–10:25 | 01 — AD Foundation: First DC, FSMO, Sites, Additional DC, Users/Groups | 01–03 |
+| 10:25–11:00 | 02 — GPO and Windows Admin Center | 04–05 |
+| 11:00–12:00 | 03 — DNS and DHCP Failover | 09–10 |
+| 12:00–13:00 | Lunch | — |
+| 13:00–14:10 | 04 — Share Permissions, FSRM and DFS | 12 |
+| 14:10–14:55 | 05 — Server Hardening and Windows LAPS | 14 |
+| 14:55–15:10 | Break | — |
+| 15:10–15:45 | 06 — Performance Monitoring | 16 |
+| 15:45–16:20 | 07 — Connectivity, DNS and Time Troubleshooting | 17 |
+| 16:20–17:00 | 08 — AD Recycle Bin, Mini AD Health Check and Final Review | 18 |
 
-**เวลารวม:** 09:00–17:00 (480 นาทีรวมพัก) เวลาสอนและลงมือทำ 405 นาที
+**รวม:** 480 นาที รวมพัก 75 นาที เหลือ 405 นาทีสำหรับการเรียนและ Lab
 
-## วิธีเรียน
+การ Promote DC, DHCP Failover และ DFS ต้องใช้ Prepared Images/Checkpoints และอาจมี Guided Steps หรือ Demo ในบางส่วน ตารางนี้เป็นเป้าหมายที่ต้องทดลองทำจริงแบบจับเวลาก่อนเปิดรุ่น
 
-ใช้ชุด Lab VM เดียวกันตลอดวัน เพื่อให้เข้าใจ Dependency ของระบบ เช่น AD DS, DNS, File Services และ Group Policy ไม่ใช่เพียงทำตาม Wizard ทีละ Feature
+## Requirements and Validation
 
-แต่ละ Lab เริ่มจาก Requirement จากนั้น Configure, Validate และอธิบายผลการทดลอง
+- AD DS: ตรวจ Domain Services, Additional DC, FSMO และ Sites
+- DNS/DHCP: ยืนยัน Name Resolution และ Lease/Failover Configuration
+- File Services: ตรวจ Share Permissions, FSRM และ DFS Namespace
+- Security: ตรวจ GPO/Windows LAPS และ Hardening Controls
+- Diagnostics: ใช้ PerfMon, Network/DNS/Time Checks, AD Recycle Bin และ Mini Health Check
 
-## ถ้า Infrastructure บางส่วนไม่พร้อม
+แยก Logical Roles ใน Diagram เพื่ออธิบาย Dependencies แม้ใน Lab จริงบาง Roles จะรวมอยู่บน Guest VM เดียวกัน
 
-Hyper-V เป็น Conditional Lab สามารถเปลี่ยนเป็น File Services Extension หรือ Azure File Sync Demo ได้ ส่วน Azure Update Assessment อาจใช้ผลที่เตรียมไว้ล่วงหน้าเพราะเวลาประมวลผลขึ้นอยู่กับ Service และ Environment
-
-## รายละเอียด
-
-- [Track 1 Course Outline](course-outline.md)
-- [Lab Topics และ Expected Outcomes](lab-briefs.md)
-- [Track 2 สำหรับ Advanced Features](advanced-track.md)
+[Lab Topics](lab-briefs.md) · [Course Outline](course-outline.md) · [Logical Roles](lab-topology.md)
