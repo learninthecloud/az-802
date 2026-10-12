@@ -27,7 +27,8 @@
 
 ## Diagram index
 
-- [Lab architecture](lab-architecture.svg)
+- [Advanced S2D cluster](advanced-s2d-cluster.svg)
+- [Track 1 Lab architecture](lab-architecture.svg)
 - [01 — Active Directory](lab-01-ad-ds.svg)
 - [02 — GPO and Windows LAPS](lab-02-gpo-laps.svg)
 - [03 — DNS and DHCP](lab-03-dns-dhcp.svg)
