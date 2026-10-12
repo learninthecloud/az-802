@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="FS01 on premises connects via HTTPS to Azure Arc and is assessed by Azure Update Manager.">
-<title>06  Azure Arc and Update Manager</title>
-<desc>FS01 on premises connects via HTTPS to Azure Arc and is assessed by Azure Update Manager.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Arc connects an on-premises server to Azure so Update Manager can assess patches.">
+<title>06 / Azure Arc</title>
+<desc>Arc connects an on-premises server to Azure so Update Manager can assess patches.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">06  Azure Arc and Update Manager</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Connect an on-premises server and assess updates</text>
-<text x="86" y="145" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">On-premises</text>
-<text x="493" y="145" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Microsoft Azure</text>
-<rect x="84" y="192" width="244" height="124" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="206" y="249" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">FS01</text><text x="206" y="274" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Connected Machine Agent</text>
-<line x1="345" y1="155" x2="345" y2="369" stroke="#C8C8C8" stroke-width="1.5" stroke-dasharray="5 6"/>
-<rect x="422" y="192" width="204" height="124" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="524" y="249" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Azure Arc</text><text x="524" y="274" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Connected status</text>
-<rect x="690" y="192" width="208" height="124" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="794" y="249" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Update Manager</text><text x="794" y="274" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Assessment results</text>
-<line x1="337" y1="254" x2="414" y2="254" stroke="#161616" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-<text x="376" y="239" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" letter-spacing="0">HTTPS</text>
-<line x1="634" y1="254" x2="682" y2="254" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="84" y="401" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">Verify  /  Arc resource exists; assessment results are visible.</text>
-<text x="84" y="431" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">No patch installation or server restart required during class.</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">06 / Azure Arc</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">Manage the server without moving the server.</text>
+<text x="124" y="166" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">On-premises</text>
+<text x="535" y="166" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">Microsoft Azure</text>
+<rect x="105" y="216" width="240" height="110" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="225" y="261.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">FS01</text><text x="225" y="286.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Connected Machine Agent</text>
+<rect x="451" y="216" width="199" height="110" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2" stroke-opacity="0.75"/><text x="550.5" y="261.5" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Azure Arc</text><text x="550.5" y="286.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Connected</text>
+<rect x="726" y="216" width="176" height="110" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="814" y="261.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Update Manager</text><text x="814" y="286.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Assessment</text>
+<line x1="353" y1="271" x2="443" y2="271" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" stroke-dasharray="5 5" marker-end="url(#dark-arrow)"/>
+<text x="398" y="254" fill="#171717" fill-opacity="0.65" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">HTTPS</text>
+<line x1="658" y1="271" x2="718" y2="271" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<text x="687" y="254" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">Check</text>
+<text x="480" y="405" fill="#171717" fill-opacity="0.6" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Assessment is not patch installation.</text>
 </svg>
