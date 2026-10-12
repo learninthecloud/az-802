@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Test VM moves from State A to modified State B; applying the checkpoint restores State A.">
-<title>05  Hyper-V checkpoints</title>
-<desc>Test VM moves from State A to modified State B; applying the checkpoint restores State A.</desc>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" viewBox="0 0 10 8" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#161616" stroke-width="1.4"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Disposable VM changes from state A to B and can restore checkpoint A.">
+<title>05 / Hyper-V checkpoint</title>
+<desc>Disposable VM changes from state A to B and can restore checkpoint A.</desc>
+<defs>
+<marker id="dark-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#171717" stroke-width="1.1"/></marker>
+<marker id="blue-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" viewBox="0 0 7 6" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#2563EB" stroke-width="1.1"/></marker>
+</defs>
 <rect width="960" height="500" fill="#FFFFFF"/>
-<text x="48" y="52" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">05  Hyper-V checkpoints</text>
-<text x="48" y="77" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Create, change, restore  /  use a disposable test VM</text>
-<rect x="84" y="182" width="234" height="110" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="201" y="232" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Test VM</text><text x="201" y="257" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">State A</text>
-<rect x="642" y="182" width="234" height="110" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="759" y="232" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Test VM</text><text x="759" y="257" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">State B  /  modified</text>
-<line x1="326" y1="234" x2="634" y2="234" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text x="480" y="219" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Change VM state</text>
-<line x1="201" y1="298" x2="201" y2="357" stroke="#161616" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="84" y="365" width="234" height="79" rx="0" fill="#FFFFFF" stroke="#161616" stroke-width="1.4"/><text x="201" y="412" fill="#161616" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="0">Checkpoint A</text>
-<path d="M759 299 V404 H326" fill="none" stroke="#161616" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-<text x="539" y="390" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0">Apply checkpoint</text>
-<text x="480" y="462" fill="#666666" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="middle" letter-spacing="0">Checkpoint is not a backup.</text>
-
+<text x="52" y="55" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="600" text-anchor="start">05 / Hyper-V checkpoint</text>
+<text x="52" y="80" fill="#171717" fill-opacity="0.58" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="start">Change the VM. Then return to the known state.</text>
+<rect x="131" y="174" width="232" height="100" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="247" y="214.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Test VM</text><text x="247" y="239.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">State A</text>
+<rect x="597" y="174" width="232" height="100" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="1.2" stroke-opacity="0.75"/><text x="713" y="214.5" fill="#171717" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Test VM</text><text x="713" y="239.5" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="11px" font-weight="400" text-anchor="middle">State B</text>
+<line x1="372" y1="221" x2="588" y2="221" stroke="#171717" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#dark-arrow)"/>
+<text x="480" y="202" fill="#171717" fill-opacity="0.7" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Change</text>
+<rect x="131" y="342" width="232" height="80" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2" stroke-opacity="0.75"/><text x="247" y="387" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="600" text-anchor="middle">Checkpoint A</text>
+<line x1="247" y1="282" x2="247" y2="334" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" marker-end="url(#blue-arrow)"/>
+<path d="M713 282 V375 Q713 385 703 385 H375" fill="none" stroke="#2563EB" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#blue-arrow)"/>
+<text x="541" y="372" fill="#2563EB" fill-opacity="1" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Apply checkpoint</text>
+<text x="480" y="468" fill="#171717" fill-opacity="0.6" font-family="Segoe UI, Arial, sans-serif" font-size="12px" font-weight="400" text-anchor="middle">Checkpoint ≠ backup</text>
 </svg>
