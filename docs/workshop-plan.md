@@ -1,4 +1,6 @@
-# Onsite Workshop Plan — 09:00–17:00
+# Track 1 — Onsite Workshop Plan (09:00–17:00)
+
+Track 1 เน้น Administration. สำหรับ S2D, Failover Clustering และ Advanced HA/DR ดู [Track 2](advanced-track.md)
 
 ## Project Scenario
 
